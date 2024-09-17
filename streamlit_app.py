@@ -13,3 +13,4 @@ def menu():
     register()
   else:
     menu()
+menu()
