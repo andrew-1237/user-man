@@ -1,9 +1,6 @@
 import streamlit as st
 
-st.title("🎈 My new app")
-st.write("my first app")
-name = st.text_input("enter your name")
-st.write("welcome", name)
+st.title("login or register")
 
 def menu():
   slect = st.text_input("enter L to log in or R to register").lower()
