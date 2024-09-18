@@ -27,7 +27,7 @@ def register():
   menu()
 
 def adminf():
-  print("Line 14")
+  st.write("Line 14")
 
 
 def login():
