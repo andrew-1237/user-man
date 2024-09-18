@@ -26,7 +26,30 @@ def register():
   file.close()
   menu()
 
+def adminf():
+  print("Line 14")
 
+
+def login():
+  enterdusername = st.text_input("enter user name")
+  enterdpassword = st.text_input("enter password")
+  file=open("userlist.txt","r")
+  for line in file:
+    lines = line.split(",")
+    username = lines[0]
+    password = lines[1]
+    forename = lines[2]
+    birthday = lines[3]
+    surname = lines[4]
+    admin = lines[5]
+    
+    if enterdusername == username and enterdpassword == password:
+      if admin == "N":
+        print( "welcome " + forename + " " + surname + " your birthday is " + birthday )
+        menu()
+      else:
+        print ("welcome admin")
+        adminf()
 
 
 
