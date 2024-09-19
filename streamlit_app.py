@@ -5,7 +5,7 @@ st.title("login or register")
 
 def login():
   enterdusername = st.text_input("enter user name")
-  #enterdpassword = st.text_input("enter password")
+  enterdpassword = st.text_input("enter password")
   if st.button("check user"):
     file = open("userlist.csv", "r", encoding="utf-8-sig")
     user_found = False 
@@ -14,8 +14,7 @@ def login():
 
       username = lines[0]
       password = lines[1]
-      if enterdusername == username:
-        #and enterdpassword == password:
+      if enterdusername == username and enterdpassword == password:
         with open("userlog.csv", "a", newline='') as file: 
           file.write(username + "," + str(datetime.datetime.now().replace(microsecond=0)) + "\n")
           st.session_state.logged_in = true
