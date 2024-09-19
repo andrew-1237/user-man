@@ -32,7 +32,7 @@ def adminf():
 def login():
   enterdusername = st.text_input("enter user name")
   enterdpassword = st.text_input("enter password")
-  if st.butten("check user"):
+  if st.button("check user"):
     file = open("userlist.csv", "r", encoding="utf-8-sig")
     user_found = False 
     for line in file:
