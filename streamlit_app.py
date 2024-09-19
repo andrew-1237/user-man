@@ -56,8 +56,40 @@ def dashboard():
   if st.button("sigh out");
     st.session_state.logged_in = false 
   st.title("user mangmet and logine recored")
-  choice = st.sidebar.radio("slect remove or add",[:rainbow[Add}", ":rainbow[Remove]", ":rainbow[View]"])
-  im on line 39
+  choice = st.sidebar.radio("slect remove or add",[:rainbow[Add]", ":rainbow[Remove]", ":rainbow[View]"])
+  if choice ==":rainbow[Add]": 
+    username = st.text_input("enter a user name to add")
+    password = st.text_input("enter a password to add") 
+    if st.button("add user"):
+      with open("userlist.csv", "a" newline='') as file:
+        file.write(username + "," + password+ "/n")
+  elif choice ==  ":rainbow[Remove]":
+    username = st.text_input("enter a username to remove")
+    if st.button("remove user"):
+      df = pd.read_csv("userlist.csv")
+      if username in df["username"].values:
+        df = df[df["username] != username]
+        df.to_csv("userlist.csv", index=false)
+        st.success(f"user{username} removed successfully.")
+    else:  
+      st.error (f"user{username} not found in dater.")
+  else:
+    df = pd.read_csv("userlist.csv")
+    st.dataframe(df)
+    df = pd.read_csv("userlog.csv")
+    st.dataframe(df)
+  if "logged_in" not in st.session_state:
+    st.session_state.logged_in=false
+
+  if st.session_state.logged_in: 
+    dashboard()
+
+  else:
+    login()
+    
+       
+    
+      
   
   
 
