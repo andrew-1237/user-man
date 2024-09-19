@@ -3,24 +3,6 @@ import pandas as pd
 import datetime 
 st.title("login or register")
 
-def register():
-  surname = st.text_input("enter your surname").lower()
-  forename = st.text_input("enter your forename").lower()
-  birthday = st.text_input("enter your birthday like this 24031988 for someone born on 24 March 1988")
-  password = st.text_input("enter a password")
-  username = forename[0] + surname[1] + surname[2] + birthday
-  st.write("your user name is " + username)
-  st.write("your password is " + password)
-  file=open("userlist.txt","a")
-  file.write("\n" + username + "," + password + "," + forename + "," + birthday + "," + surname + "," + "no" + "," + "1" + ",")
-  file.close()
-  menu()
-
-def adminf():
-  st.write ("welcome admin")
-  st.write("Line 14")
-
-
 def login():
   enterdusername = st.text_input("enter user name")
   enterdpassword = st.text_input("enter password")
