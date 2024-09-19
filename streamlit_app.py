@@ -62,7 +62,7 @@ def dashboard():
     username = st.text_input("enter a user name to add")
     password = st.text_input("enter a password to add") 
     if st.button("add user"):
-      with open("userlist.csv", "a" newline='') as file:
+      with open("userlist.csv", "a", newline='') as file:
         file.write(username + "," + password+ "/n")
   elif choice ==  ":rainbow[Remove]":
     username = st.text_input("enter a username to remove")
