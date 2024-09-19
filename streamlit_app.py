@@ -34,25 +34,15 @@ def login():
   enterdpassword = st.text_input("enter password")
   if st.butten("check user"):
     file = open("userlist.csv", "r", encoding="utf-8-sig")
-  
-  file=open("userlist.txt","r")
-  for line in file:
-    lines = line.split(",")
-    username = lines[0]
-    password = lines[1]
-    forename = lines[2]
-    birthday = lines[3]
-    surname = lines[4]
-    admin = lines[5]
-    
-    if enterdusername == username and enterdpassword == password:
-      if admin == "N":
-        print( "welcome " + forename + " " + surname + " your birthday is " + birthday )
-        menu()
-      else:
-        print ("welcome admin")
-        adminf()
+    user_found = False 
+    for line in file:
+      lines = line.strip().split(",")
 
+  username = lines[0]
+  password = lines[1]
+  if enterdusername == username and enterdpassword == password:
+    with open("userlog.csv", "a" newline='') as file: 
+ 
 
 
 
