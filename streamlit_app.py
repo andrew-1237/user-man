@@ -38,18 +38,18 @@ def login():
     for line in file:
       lines = line.strip().split(",")
 
-  username = lines[0]
-  password = lines[1]
-  if enterdusername == username and enterdpassword == password:
-    with open("userlog.csv", "a", newline='') as file: 
-      file.write(username + "," + str(datetime.datetime.now().replace(microsecond=0)) + "\n")
-      st.session_state.logged_in = true
-      st.success("login successful")
-      user_found = True 
-      break 
-  if not user_found:
-    st.error("invaled user name or password")
-  file.close()
+      username = lines[0]
+      password = lines[1]
+      if enterdusername == username and enterdpassword == password:
+        with open("userlog.csv", "a", newline='') as file: 
+          file.write(username + "," + str(datetime.datetime.now().replace(microsecond=0)) + "\n")
+          st.session_state.logged_in = true
+          st.success("login successful")
+          user_found = True 
+          break 
+    if not user_found:
+      st.error("invaled user name or password")
+    file.close()
 
 def dashboard():
   st.write("wecome admin")
