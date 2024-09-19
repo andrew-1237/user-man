@@ -4,7 +4,6 @@ import datetime
 st.title("login or register")
 
 def login():
-  enterusername = st.text_input("Test input")
   enterdusername = st.text_input("enter user name")
   enterdpassword = st.text_input("enter password")
   if st.button("check user"):
