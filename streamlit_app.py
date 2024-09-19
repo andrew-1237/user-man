@@ -3,14 +3,6 @@ import pandas as pd
 import datetime 
 st.title("login or register")
 
-def menu():
-  slect = st.text_input("enter L to log in or R to register").lower()
-  if slect == "l":
-    login()
-  elif slect == "r":
-    register()
-  else:
-    menu()
 def register():
   surname = st.text_input("enter your surname").lower()
   forename = st.text_input("enter your forename").lower()
@@ -88,4 +80,4 @@ if st.session_state.logged_in:
 else:
   login()
     
-menu()
+login()
