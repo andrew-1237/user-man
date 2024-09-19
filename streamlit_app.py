@@ -3,7 +3,7 @@ import pandas as pd
 import datetime 
 st.title("login or register")
 
-def login():
+'''def login():
   enterdusername = st.text_input("enter user name")
   enterdpassword = st.text_input("enter password")
   if st.button("check user"):
@@ -23,7 +23,7 @@ def login():
           break 
     if not user_found:
       st.error("invaled user name or password")
-    file.close()
+    file.close()''
 
 def dashboard():
   st.write("wecome admin")
@@ -62,4 +62,4 @@ if st.session_state.logged_in:
 else:
   login()
     
-login()
+dasboard()
