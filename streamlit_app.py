@@ -4,8 +4,8 @@ import datetime
 st.title("login or register")
 
 def login():
-  enterdusername = st.text_input("enter user name")
-  enterdpassword = st.text_input("enter password")
+  ename = st.text_input("enter user name")
+  epass = st.text_input("enter password")
   if st.button("check user"):
     file = open("userlist.csv", "r", encoding="utf-8-sig")
     user_found = False 
@@ -14,7 +14,7 @@ def login():
 
       username = lines[0]
       password = lines[1]
-      if enterdusername == username and enterdpassword == password:
+      if ename == username and epass == password:
         with open("userlog.csv", "a", newline='') as file: 
           file.write(username + "," + str(datetime.datetime.now().replace(microsecond=0)) + "\n")
           st.session_state.logged_in = true
@@ -29,7 +29,7 @@ def dashboard():
   st.write("wecome admin")
   if st.button("sign out"):
     st.session_state.logged_in = false 
-  st.title("user mangmet and logine recored")
+  st.title("User Management and Login Record")
   choice = st.sidebar.radio("slect add, remove or view",
   [":rainbow[Add]", ":rainbow[Remove]", ":rainbow[View]"])
   if choice ==":rainbow[Add]": 
