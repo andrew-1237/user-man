@@ -53,7 +53,7 @@ def login():
 
 def dashboard():
   st.write("wecome admin")
-  if st.button("sigh out");
+  if st.button("sign out"):
     st.session_state.logged_in = false 
   st.title("user mangmet and logine recored")
   choice = st.sidebar.radio("slect add, remove or view",
