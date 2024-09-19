@@ -4,7 +4,7 @@ import datetime
 st.title("login or register")
 
 def login():
-  enterdusername = st.text_input("enter user name")
+  #enterdusername = st.text_input("enter user name")
   enterdpassword = st.text_input("enter password")
   if st.button("check user"):
     file = open("userlist.csv", "r", encoding="utf-8-sig")
