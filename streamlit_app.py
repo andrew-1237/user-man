@@ -69,7 +69,7 @@ def dashboard():
     if st.button("remove user"):
       df = pd.read_csv("userlist.csv")
       if username in df["username"].values:
-        df = df[df["username] != username]
+        df = df[df["username"] != username]
         df.to_csv("userlist.csv", index=false)
         st.success(f"user{username} removed successfully.")
     else:  
