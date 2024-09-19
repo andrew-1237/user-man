@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd 
-import datatime 
+import datetime 
 st.title("login or register")
 
 def menu():
