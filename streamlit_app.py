@@ -41,7 +41,7 @@ def login():
   username = lines[0]
   password = lines[1]
   if enterdusername == username and enterdpassword == password:
-    with open("userlog.csv", "a" newline='') as file: 
+    with open("userlog.csv", "a", newline='') as file: 
     file.write(username + "," + str(datetime.datetime.now().replace(microsecond=0)) + "\n")
     st.session_state.logged_in = true
     st.success("login successful")
