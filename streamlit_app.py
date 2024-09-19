@@ -1,5 +1,6 @@
 import streamlit as st
-
+import pandas as pd 
+import datatime 
 st.title("login or register")
 
 def menu():
@@ -31,6 +32,9 @@ def adminf():
 def login():
   enterdusername = st.text_input("enter user name")
   enterdpassword = st.text_input("enter password")
+  if st.butten("check user"):
+    file = open("userlist.csv", "r", encoding="utf-8-sig")
+  
   file=open("userlist.txt","r")
   for line in file:
     lines = line.split(",")
