@@ -45,7 +45,7 @@ def login():
     file.write(username + "," + str(datetime.datetime.now().replace(microsecond=0)) + "\n)
     st.session_state.logged_in = true
     st.success("login successful")
-    user_found = true 
+    user_found = True 
     break 
   if not user_found:
     st.error("invaled user name or password")
