@@ -79,21 +79,13 @@ def dashboard():
     st.dataframe(df)
     df = pd.read_csv("userlog.csv")
     st.dataframe(df)
-  if "logged_in" not in st.session_state:
-    st.session_state.logged_in=false
-
-  if st.session_state.logged_in: 
-    dashboard()
-
-  else:
-    login()
     
-       
+if "logged_in" not in st.session_state:
+  st.session_state.logged_in=false
+
+if st.session_state.logged_in: 
+  dashboard()
+else:
+  login()
     
-      
-  
-  
-
-
-
 menu()
