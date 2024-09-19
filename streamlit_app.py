@@ -23,7 +23,7 @@ def login():
           break 
     if not user_found:
       st.error("invaled user name or password")
-      file.close()
+    file.close()
 
 def dashboard():
   st.write("wecome admin")
