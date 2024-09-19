@@ -51,7 +51,15 @@ def login():
     st.error("invaled user name or password")
   file.close()
 
-
+def dashboard():
+  st.write("wecome admin")
+  if st.button("sigh out");
+    st.session_state.logged_in = false 
+  st.title("user mangmet and logine recored")
+  choice = st.sidebar.radio("slect remove or add",[:rainbow[Add}", ":rainbow[Remove]", ":rainbow[View]"])
+  im on line 39
+  
+  
 
 
 
