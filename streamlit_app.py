@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import datetime
 
-st.title("Login or Register")
+st.title("User Management")
 
 def login():
     ename = st.text_input("Enter username")
